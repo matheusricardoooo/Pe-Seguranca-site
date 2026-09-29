@@ -20,7 +20,6 @@
 .logo-empresa {
     width: 200px;
     height: 80px;
-    margin-bottom: 20px;
 }
 
 .title-hero {
@@ -30,7 +29,6 @@
     font-size: 2.8rem;
     color: #ffffff;
     margin-bottom: 10px;
-    line-height: 1.2;
 }
 
 .paragraph-hero {
@@ -39,8 +37,8 @@
     font-weight: 200;
     font-size: 1.2rem;
     color: #ffffff;
-    margin-bottom: 30px;
-    line-height: 1.6;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .ctas-hero {
@@ -51,19 +49,28 @@
 
 .btn-hero-principal,
 .btn-hero-secundario {
-    width: 247px;
+    width: 257px;
     height: 60px;
     gap: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 1.01rem;
     padding: 0 20px;
     cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-hero-principal:active {
+    transform: scale(1.08);
+}
+
+.btn-hero-secundario:active {
+    transform: scale(1.08);
 }
 
 .btn-hero-principal {
@@ -134,6 +141,16 @@
 }
 
 @media (max-width: 480px) {
+
+    #hero-section {
+        align-items: center;
+    }
+
+    .content-hero {
+        align-items: center;
+        text-align: center;
+    }
+
     .logo-empresa {
         width: 150px;
         height: auto;
