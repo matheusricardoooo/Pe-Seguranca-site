@@ -1,0 +1,86 @@
+#benefits {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 560px));
+    justify-content: center;
+    align-items: stretch;
+    gap: clamp(32px, 5vw, 64px);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(48px, 8vw, 96px) 36px;
+}
+
+#benefits > .card-benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: min(100%, 510px);
+    min-width: 0;
+    padding: 0 0 24px;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 32px rgba(17, 17, 17, 0.08);
+}
+
+#benefits > .card-benefits > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 510 / 286;
+    object-fit: cover;
+}
+
+.title-benefits,
+.paragraph-benefits {
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.title-benefits {
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.25;
+    color: #111111;
+}
+
+.paragraph-benefits {
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #4f4f4f;
+}
+
+.line-benefi {
+    position: absolute;
+    inset: 15% auto 8% 49.5%;
+    z-index: 1;
+    width: 44px;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.line-benefi img {
+    position: relative;
+    left: 50%;
+    display: block;
+    width: 120%;
+    height: 90%;
+    object-fit: fill;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 720px) {
+    #benefits {
+        grid-template-columns: minmax(0, 510px);
+        gap: 24px;
+        padding: 48px 20px;
+    }
+
+    .line-benefi {
+        display: none;
+    }
+}
