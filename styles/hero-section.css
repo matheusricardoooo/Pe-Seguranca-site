@@ -16,6 +16,49 @@
     justify-content: center;
     padding: 0px 140px;
     max-width: 55vw;
+    animation: hero-content-enter 800ms ease-out both;
+}
+
+.content-hero > * {
+    animation: hero-item-enter 650ms ease-out both;
+}
+
+.content-hero > :nth-child(1) {
+    animation-delay: 100ms;
+}
+
+.content-hero > :nth-child(2) {
+    animation-delay: 220ms;
+}
+
+.content-hero > :nth-child(3) {
+    animation-delay: 340ms;
+}
+
+.content-hero > :nth-child(4) {
+    animation-delay: 460ms;
+}
+
+@keyframes hero-content-enter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hero-item-enter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .logo-empresa {
@@ -175,5 +218,12 @@
         height: 24px;
         display: flex;
         justify-content: end;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-hero,
+    .content-hero > * {
+        animation: none;
     }
 }
