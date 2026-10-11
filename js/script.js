@@ -2,7 +2,7 @@ const carousel = document.querySelector(".solutions-carousel");
 
 if (carousel) {
     const track = carousel.querySelector(".solutions-track");
-    const slides = Array.from(carousel.querySelectorAll(".card-solution"));
+    const slides = Array.from(carousel.querySelector(".solutions-track").children);
     const indicators = Array.from(carousel.querySelectorAll(".carousel-indicator"));
     const status = carousel.querySelector(".carousel-status");
     const previousButton = carousel.querySelector("[data-carousel-previous]");
