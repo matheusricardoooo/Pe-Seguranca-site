@@ -1,0 +1,105 @@
+#chamada-orcamento {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 70vh;
+    padding: clamp(48px, 8vw, 100px) clamp(20px, 5vw, 70px);
+    background: url(../img/img-fundo-chamada.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.content-chamada {
+    width: min(100%, 650px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 1.6vw, 20px);
+}
+
+.title-chamada {
+    max-width: 571px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 1.12;
+    color: #fff;
+    margin: 0 0 10px;
+}
+
+.paragraph-chamada {
+    max-width: 584px;
+    font-size: clamp(1rem, 1.7vw, 1.2rem);
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    line-height: 1.55;
+    color: #fff;
+    margin: 0 0 15px;
+}
+
+.btn-chamada {
+    width: min(250px, 100%);
+    min-height: 57px;
+    padding: 0 16px;
+    border: none;
+    color: #fff;
+    background-color: #ff0000;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.seta-chamada {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    #chamada-orcamento {
+        min-height: 0;
+        padding: 64px 32px;
+        background-position: center;
+    }
+
+    .content-chamada {
+        width: min(100%, 560px);
+    }
+
+    .title-chamada {
+        font-size: clamp(2rem, 6vw, 2.75rem);
+    }
+}
+
+@media (max-width: 480px) {
+    #chamada-orcamento {
+        text-align: center;
+        padding: 48px 20px;
+        height: 50vh;
+    }
+
+    .content-chamada {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-chamada {
+        font-size: clamp(1.8rem, 8vw, 2.25rem);
+    }
+
+    .paragraph-chamada {
+        font-size: 1rem;
+    }
+
+    .btn-chamada {
+        width: 100%;
+        max-width: 220px;
+        min-height: 52px;
+        font-size: 1rem;
+    }
+}
