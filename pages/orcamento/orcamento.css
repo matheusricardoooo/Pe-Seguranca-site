@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    color: #090909;
+    background: #f4f4f4;
+    font-family: 'Roboto', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+#orcamento {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    width: 100%;
+    min-height: 832px;
+    height: 100vh;
+    overflow: hidden;
+    background: #f4f4f4;
+}
+
+#orcamento .left {
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #101820;
+}
+
+.orcamento-funcionario {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#orcamento .right {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 0;
+    height: 100%;
+    overflow-y: auto;
+    background: #f4f4f4;
+}
+
+.orcamento-titulo {
+    max-width: 536px;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.orcamento-titulo .color {
+    color: #ed101a;
+}
+
+.orcamento-descricao {
+    max-width: 482px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.card-form-solicitar {
+    position: relative;
+    width: 100%;
+    max-width: 573px;
+    height: 606px;
+    margin: 0;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 22%);
+}
+
+.card-form-solicitar button,
+.card-form-solicitar input,
+.card-form-solicitar select {
+    font: inherit;
+}
+
+.card-form-solicitar button {
+    color: inherit;
+}
+
+.card-form-titulo {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.card-form-solicitar > .protecao {
+    position: absolute;
+    top: 26px;
+    right: 27px;
+    left: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 8px;
+    min-height: 96px;
+}
+
+.card-form-solicitar > .protecao .card-form-titulo {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+    font-size: 19px;
+}
+
+.card-form-button {
+    display: flex;
+    width: 100%;
+    height: 43px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+    padding: 0 10px;
+    border: 0;
+    border-radius: 6px;
+    background: #f6f6f6;
+    cursor: pointer;
+    transition: background-color 160ms ease, color 160ms ease, transform 120ms ease, box-shadow 160ms ease;
+}
+
+.card-form-button.is-selected {
+    background: #fff0f1;
+    color: #c9000a;
+}
+
+.btn-protecao.is-selected,
+.btn-melhora.is-selected {
+    background: #fff0f1;
+}
+
+.card-form-button:hover,
+.btn-protecao:hover,
+.btn-melhora:hover {
+    background: #fff0f1;
+    box-shadow: 0 3px 9px rgb(229 9 20 / 12%);
+}
+
+.card-form-button:active,
+.btn-protecao:active,
+.btn-melhora:active {
+    transform: scale(0.97);
+    background: #ffe0e2;
+    box-shadow: inset 0 1px 3px rgb(0 0 0 / 12%);
+}
+
+.card-form-button img {
+    display: block;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.card-form-subtitulo {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.protection {
+    display: flex;
+    position: absolute;
+    top: 137px;
+    left: 28px;
+    width: 262px;
+}
+
+.protection .protecao {
+    display: grid;
+    grid-template-columns: repeat(4, 52px);
+    grid-template-rows: auto repeat(2, 53px);
+    gap: 8px 6px;
+    width: 262px;
+}
+
+.protection .card-form-titulo,
+.upgrade .card-form-titulo {
+    grid-column: 1 / -1;
+    align-self: start;
+    white-space: nowrap;
+}
+
+.protection .card-form-titulo {
+    margin-bottom: 10px;
+}
+
+.btn-protecao {
+    display: flex;
+    width: 52px;
+    height: 53px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 5px 2px 2px;
+    border: 0;
+    border-radius: 6px;
+    background: #f6f6f6;
+    cursor: pointer;
+    transition: background-color 160ms ease, color 160ms ease, transform 120ms ease, box-shadow 160ms ease;
+}
+
+.btn-protecao img {
+    display: block;
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+.btn-protecao-subtitulo {
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 1.05;
+    text-align: center;
+}
+
+.upgrade {
+
+    position: absolute;
+    top: 137px;
+    left: 305px;
+    display: grid;
+    grid-template-columns: repeat(2, 114px);
+    grid-template-rows: 16px repeat(3, 33px);
+    gap: 13px 8px;
+    width: 254px;
+}
+
+.upgrade .card-form-titulo {
+    font-size: 16px;
+}
+
+.btn-melhora {
+    display: flex;
+    width: 114px;
+    height: 33px;
+    align-items: center;
+    gap: 6px;
+    padding: 0 5px;
+    border: 0;
+    border-radius: 6px;
+    background: #f6f6f6;
+    cursor: pointer;
+    transition: background-color 160ms ease, color 160ms ease, transform 120ms ease, box-shadow 160ms ease;
+}
+
+.btn-melhora img {
+    display: block;
+    flex: 0 0 17px;
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+.btn-melhora .btn-protecao-subtitulo {
+    font-size: 8px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.dados-cliente {
+    position: absolute;
+    top: 317px;
+    left: 18px;
+    width: 537px;
+    height: 218px;
+}
+
+.dados-cliente > .card-form-titulo {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 19px;
+}
+
+.campo-nome,
+.campo-email,
+.campo-cpf,
+.campo-local,
+.campo-telefone {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo-nome label,
+.campo-email label,
+.campo-cpf label,
+.campo-local label,
+.campo-telefone label,
+.tipo-pessoa .pergunta,
+.equipamento .pergunta,
+.pesquisa > label {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.campo-nome input,
+.campo-email input,
+.campo-cpf input,
+.campo-local input,
+.campo-telefone input,
+.pesquisa select {
+    width: 100%;
+    height: 33px;
+    min-width: 0;
+    padding: 0 9px;
+    border: 0.5px solid #777;
+    border-radius: 5px;
+    background: #fff;
+    color: #171717;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 10px;
+    outline-offset: 2px;
+}
+
+.campo-nome input::placeholder,
+.campo-email input::placeholder,
+.campo-cpf input::placeholder,
+.campo-local input::placeholder,
+.campo-telefone input::placeholder {
+    color: #bebebe;
+    opacity: 1;
+}
+
+.campo-nome {
+    top: 36px;
+    left: 10px;
+    width: 275px;
+}
+
+.campo-email {
+    top: 36px;
+    left: 291px;
+    width: 233px;
+}
+
+.campo-cpf {
+    top: 89px;
+    left: 10px;
+    width: 165px;
+}
+
+.campo-local {
+    top: 92px;
+    left: 186px;
+    width: 165px;
+}
+
+.campo-telefone {
+    top: 92px;
+    left: 359px;
+    width: 165px;
+}
+
+.tipo-pessoa,
+.equipamento,
+.pesquisa {
+    position: absolute;
+    top: 153px;
+}
+
+.tipo-pessoa {
+    left: 12px;
+    width: 188px;
+}
+
+.equipamento {
+    left: 211px;
+    width: 181px;
+}
+
+.pesquisa {
+    left: 402px;
+    width: 117px;
+}
+
+.tipo-pessoa .pergunta,
+.equipamento .pergunta,
+.pesquisa > label {
+    display: block;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+.opcao-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 5px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 8px;
+    line-height: 1.2;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.opcao-radio input {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    accent-color: #ed101a;
+}
+
+.pesquisa select {
+    height: 34px;
+    padding-right: 20px;
+    font-size: 9px;
+}
+
+.enviar {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+}
+
+.btn-enviar {
+    display: flex;
+    width: 168px;
+    height: 36px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 13px 0 20px;
+    border: 0;
+    border-radius: 5px;
+    background: #e50914;
+    color: #fff !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background: #c9000a;
+    box-shadow: 0 4px 12px rgb(229 9 20 / 22%);
+}
+
+.btn-enviar:active {
+    transform: translateY(1px) scale(0.98);
+    background: #a90008;
+    box-shadow: inset 0 2px 4px rgb(0 0 0 / 18%);
+}
+
+.btn-enviar:focus-visible,
+.card-form-button:focus-visible,
+.btn-protecao:focus-visible,
+.btn-melhora:focus-visible {
+    outline: 2px solid #111;
+    outline-offset: 2px;
+}
+
+.btn-enviar img {
+    display: block;
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+@media (min-width: 1101px) and (max-width: 1199px) {
+    #orcamento {
+        grid-template-columns: minmax(320px, 40%) minmax(0, 60%);
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    #orcamento .left {
+        min-height: 832px;
+    }
+
+    #orcamento .right {
+        height: auto;
+        min-height: 832px;
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+
+    .card-form-solicitar {
+        height: 606px;
+        transform-origin: top left;
+    }
+
+    .orcamento-titulo {
+        font-size: clamp(25px, 3vw, 32px);
+    }
+}
+
+@media (max-width: 1100px) {
+    #orcamento {
+        grid-template-columns: 1fr;
+        min-height: 100vh;
+    }
+
+    #orcamento .left {
+        min-height: 0;
+        height: min(70vh, 640px);
+    }
+
+    #orcamento .right {
+        min-height: 0;
+        padding: 36px clamp(20px, 6vw, 62px) 40px;
+        overflow: visible;
+    }
+
+    .orcamento-titulo,
+    .orcamento-descricao,
+    .card-form-solicitar {
+        width: 100%;
+        max-width: 573px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .orcamento-titulo {
+        font-size: clamp(27px, 5vw, 34px);
+    }
+
+    .card-form-solicitar {
+        height: auto;
+        min-height: 606px;
+        padding-bottom: 72px;
+    }
+
+    .protection {
+        width: calc(50% - 18px);
+    }
+
+    .protection .protecao {
+        grid-template-columns: repeat(4, minmax(44px, 52px));
+        width: 100%;
+    }
+
+    .btn-protecao {
+        width: 100%;
+    }
+
+    .upgrade {
+        right: 18px;
+        left: auto;
+        width: calc(50% - 18px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .btn-melhora {
+        width: 100%;
+        gap: 4px;
+        padding: 0 3px;
+    }
+
+    .btn-melhora .btn-protecao-subtitulo {
+        font-size: 8px;
+    }
+
+    .dados-cliente {
+        right: 18px;
+        left: 18px;
+        width: auto;
+    }
+
+    .campo-email {
+        right: 10px;
+        left: auto;
+        width: calc(50% - 3px);
+    }
+
+    .campo-nome {
+        width: calc(50% - 3px);
+    }
+
+    .campo-cpf,
+    .campo-local,
+    .campo-telefone {
+        width: calc((100% - 22px) / 3);
+    }
+
+    .campo-local {
+        left: calc((100% - 22px) / 3 + 11px);
+    }
+
+    .campo-telefone {
+        right: 0;
+        left: auto;
+    }
+
+    .tipo-pessoa {
+        left: 10px;
+        width: 36%;
+    }
+
+    .equipamento {
+        left: 39%;
+        width: 36%;
+    }
+
+    .pesquisa {
+        right: 10px;
+        left: auto;
+        width: 22%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #orcamento {
+        height: auto;
+        overflow-x: auto;
+        overflow-y: visible;
+    }
+
+    #orcamento .left {
+        display: none;
+    }
+
+    #orcamento .right {
+        height: auto;
+        padding: 34px 16px 32px;
+        overflow: visible;
+    }
+
+    .orcamento-descricao {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    .card-form-solicitar {
+        display: flex;
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        gap: 23px;
+        padding: 22px 16px 20px;
+    }
+
+    .card-form-solicitar > .protecao,
+    .protection,
+    .upgrade,
+    .dados-cliente,
+    .enviar {
+        position: static;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+    }
+
+    .card-form-solicitar > .protecao {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .card-form-solicitar > .protecao .card-form-titulo {
+        margin-bottom: 7px;
+    }
+
+    .card-form-button {
+        width: 100%;
+        height: 60px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+        padding: 4px 2px;
+    }
+
+    .card-form-button .card-form-subtitulo {
+        font-size: 11px;
+    }
+
+    .protection .protecao {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: auto repeat(2, 60px);
+        gap: 8px;
+    }
+
+    .protection .card-form-titulo,
+    .upgrade .card-form-titulo {
+        white-space: normal;
+    }
+
+    .btn-protecao {
+        min-width: 0;
+        width: 100%;
+        height: 60px;
+        gap: 5px;
+    }
+
+    .btn-protecao-subtitulo {
+        font-size: 9px;
+    }
+
+    .upgrade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto repeat(3, 42px);
+        gap: 8px;
+    }
+
+    .upgrade .card-form-titulo {
+        margin-bottom: 1px;
+    }
+
+    .btn-melhora {
+        height: 42px;
+        gap: 7px;
+        padding: 0 8px;
+    }
+
+    .btn-melhora .btn-protecao-subtitulo {
+        font-size: 10px;
+        white-space: normal;
+        text-align: left;
+    }
+
+    .dados-cliente {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+        padding-top: 0;
+    }
+
+    .dados-cliente > .card-form-titulo {
+        position: static;
+        grid-column: 1 / -1;
+        margin: 0;
+    }
+
+    .campo-nome,
+    .campo-email,
+    .campo-cpf,
+    .campo-local,
+    .campo-telefone,
+    .tipo-pessoa,
+    .equipamento,
+    .pesquisa {
+        position: static;
+        width: auto;
+    }
+
+    .campo-nome,
+    .campo-email {
+        grid-column: 1 / -1;
+    }
+
+    .campo-local,
+    .campo-telefone {
+        width: auto;
+    }
+
+    .campo-nome input,
+    .campo-email input,
+    .campo-cpf input,
+    .campo-local input,
+    .campo-telefone input {
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .tipo-pessoa,
+    .equipamento,
+    .pesquisa {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .tipo-pessoa .pergunta,
+    .equipamento .pergunta,
+    .pesquisa > label {
+        margin: 0;
+        white-space: normal;
+    }
+
+    .opcao-radio {
+        margin-right: 0;
+        font-size: 10px;
+    }
+
+    .pesquisa select {
+        height: 40px;
+        font-size: 11px;
+    }
+
+    .enviar {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btn-enviar {
+        width: 100%;
+        height: 46px;
+        padding-right: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-form-solicitar button,
+    .btn-enviar {
+        transition: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .card-form-button {
+        width: 100%;
+        height: 48px;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .protection .protecao {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .upgrade {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(6, 42px);
+    }
+}
