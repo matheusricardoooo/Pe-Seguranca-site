@@ -215,7 +215,7 @@ if (productsSection) {
         {
             id: "electric-fences",
             name: "Cercas Elétricas",
-            image: "img/img-fundo-solutions2.png",
+            image: "img/img-section-cerca.png",
             imageAlt: "Cerca elétrica instalada no perímetro de um imóvel",
             imagePosition: "78% center",
             products: [
@@ -234,7 +234,7 @@ if (productsSection) {
         {
             id: "access-control",
             name: "Controle de Acesso",
-            image: "img/img-fundo-solutions5.png",
+            image: "img/img-section-controle.png",
             imageAlt: "Terminal de controle de acesso",
             imagePosition: "78% center",
             products: [
@@ -253,7 +253,7 @@ if (productsSection) {
         {
             id: "intercoms",
             name: "Interfonia",
-            image: "img/img-fundo-solutions4.png",
+            image: "img/img-section-interfone.png",
             imageAlt: "Terminal de interfonia instalado na entrada de um imóvel",
             imagePosition: "78% center",
             products: [
@@ -272,7 +272,7 @@ if (productsSection) {
         {
             id: "electric-gates",
             name: "Portões Eletrônicos",
-            image: "img/img-fundo-solutions6.png",
+            image: "img/img-section-portao.png",
             imageAlt: "Portão eletrônico instalado em uma residência",
             imagePosition: "78% center",
             products: [
@@ -289,19 +289,6 @@ if (productsSection) {
             ]
         }
     ];
-
-    if (categoryNavigation) {
-        productCategories.forEach((category) => {
-            const thumbnail = categoryNavigation.querySelector(
-                `[data-product-category="${category.id}"] img`
-            );
-            const thumbnailSource = thumbnail && thumbnail.getAttribute("src");
-
-            if (thumbnailSource) {
-                category.image = thumbnailSource;
-            }
-        });
-    }
 
     const provisionalFeatures = [
         ["info", "Aplicação"],
