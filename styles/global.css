@@ -10,37 +10,3 @@ body {
     overflow-x: hidden;
 }
 
-@view-transition {
-    navigation: auto;
-}
-
-::view-transition-old(root) {
-    animation: page-fade-out 180ms ease both;
-}
-
-::view-transition-new(root) {
-    animation: page-fade-in 300ms ease both;
-}
-
-@keyframes page-fade-out {
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes page-fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    ::view-transition-old(root),
-    ::view-transition-new(root) {
-        animation-duration: 1ms;
-    }
-}
