@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -21,10 +21,10 @@
                 tecnologia , prevenção e soluções pensadas para cada necessidade.
             </p>
             <div class="ctas-hero">
-                <button class="btn-hero-principal">
+                <a class="btn-hero-principal" href="pages/orcamento/orcamento.html">
                     <p class="text-btn">Solicitar Orçamento</p>
                     <img class="icon-btn" src="img/vector-btn-hero.png" alt="Seta para direita">
-                </button>
+                </a>
                 <button class="btn-hero-secundario">
                     Entrar em contato
                     <img class="icon-btn" src="img/vector-btn-hero.png" alt="Seta para direita">
@@ -288,6 +288,114 @@
         </div>
 
     </article>
+
+    <section id="products-section" aria-labelledby="products-title">
+        <div class="title-section-products">
+            <h2 class="title-products" id="products-title">
+                Equipamentos que fazem parte da sua proteção
+            </h2>
+        </div>
+        <div class="products-carousel">
+            <button class="btn-product-previous" type="button" data-product-previous
+                aria-label="Exibir produto anterior">
+                <span aria-hidden="true">&larr;</span>
+            </button>
+            <div class="products-slides">
+                <article class="card-product is-active" data-product-slide="0" aria-hidden="false">
+                    <div class="content-card-product">
+                        <h2 class="title-card-product">
+                            VHD 1120 DOME
+                        </h2>
+                        <p class="paragraph-card-product">
+                            Tenha mais segurança e tranquilidade para acompanhar o que acontece
+                            ao seu redor. A VHD 1120 D é uma câmera dome desenvolvida para sistemas
+                            de CFTV, combinando um design discreto e moderno com recursos pensados
+                            para proporcionar mais qualidade e eficiência no monitoramento.
+                        </p>
+
+                        <div class="card-vantagens">
+                            <div class="card-vantagens1">
+                                <h3 class="title-vantagens">
+                                    Resolução HD (720p)
+                                </h3>
+                                <p class="paragraph-vantagens">
+                                    Alta qualidade de imagem para um monitoramento eficiente.
+                                </p>
+                            </div>
+                            <div class="card-vantagens2">
+                                <h3 class="title-vantagens">
+                                    Resolução HD (720p)
+                                </h3>
+                                <p class="paragraph-vantagens">
+                                    Alta qualidade de imagem para um monitoramento eficiente.
+                                </p>
+                            </div>
+                            <div class="card-vantagens3">
+                                <h3 class="title-vantagens">
+                                    Resolução HD (720p)
+                                </h3>
+                                <p class="paragraph-vantagens">
+                                    Alta qualidade de imagem para um monitoramento eficiente.
+                                </p>
+                            </div>
+                            <div class="card-vantagens4">
+                                <h3 class="title-vantagens">
+                                    Resolução HD (720p)
+                                </h3>
+                                <p class="paragraph-vantagens">
+                                    Alta qualidade de imagem para um monitoramento eficiente.
+                                </p>
+                            </div>
+                        </div>
+                        <button class="btn-card-product">
+                            Saiba mais
+                        </button>
+                    </div>
+                    <img class="img-card-product" src="img/img-vhd1120dome.png" alt="Imagem do produto VHD 1120 DOME">
+                </article>
+            </div>
+            <button class="btn-product-next" type="button" data-product-next aria-label="Exibir próximo produto">
+                <span aria-hidden="true">&rarr;</span>
+            </button>
+        </div>
+
+        <nav class="btns-navegation" aria-label="Categorias de produtos">
+            <button class="btn-product-indicator is-active" type="button" data-product-category="cameras"
+                aria-label="Exibir categoria Câmeras de Segurança" aria-pressed="true">
+                <img src="img/img-section-camera.png" alt="" loading="lazy" decoding="async">
+                <span>Câmeras de Segurança</span>
+            </button>
+            <button class="btn-product-indicator" type="button" data-product-category="alarm-systems"
+                aria-label="Exibir categoria Sistemas de Alarme" aria-pressed="false">
+                <img src="img/img-section-alarme.png" alt="" loading="lazy" decoding="async">
+                <span>Sistemas de Alarme</span>
+            </button>
+            <button class="btn-product-indicator" type="button" data-product-category="electric-fences"
+                aria-label="Exibir categoria Cercas Elétricas" aria-pressed="false">
+                <img src="img/img-fundo-solutions2.png" alt="" loading="lazy" decoding="async">
+                <span>Cercas Elétricas</span>
+            </button>
+            <button class="btn-product-indicator" type="button" data-product-category="access-control"
+                aria-label="Exibir categoria Controle de Acesso" aria-pressed="false">
+                <img src="img/img-fundo-solutions5.png" alt="" loading="lazy" decoding="async">
+                <span>Controle de Acesso</span>
+            </button>
+            <button class="btn-product-indicator" type="button" data-product-category="intercoms"
+                aria-label="Exibir categoria Interfonia" aria-pressed="false">
+                <img src="img/img-fundo-solutions4.png" alt="" loading="lazy" decoding="async">
+                <span>Interfonia</span>
+            </button>
+            <button class="btn-product-indicator" type="button" data-product-category="electric-gates"
+                aria-label="Exibir categoria Portões Eletrônicos" aria-pressed="false">
+                <img src="img/img-fundo-solutions6.png" alt="" loading="lazy" decoding="async">
+                <span>Portões Eletrônicos</span>
+            </button>
+        </nav>
+        <p class="product-slide-status" aria-live="polite" aria-atomic="true">
+            Câmeras de Segurança: produto 1 de 3 — VHD 1120 DOME
+        </p>
+    </section>
+
     <script src="js/script.js" defer></script>
 </body>
 
